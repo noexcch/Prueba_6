@@ -1,0 +1,56 @@
+.menuse{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+.box
+{
+  margin: 15px;
+}
+
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(255, 255, 255);
+  margin: 0%;
+}
+
+.desingbuton {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #007bff; /* Color base del botón */
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave del efecto de sombra */
+}
+.desingbuton:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta el desplazamiento y la opacidad de la sombra */
+}
+
+.desinginput{
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    border: 0;
+    outline: none;
+
+}
+.dele{
+    padding: 20px;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.alert{
+  color: white;
+}
+
+.alert{
+  color: rgb(255, 255, 255);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,0 +1,43 @@
+.divicion{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px;
+}
+.item{
+    padding: 10px;
+    text-align: center;
+}
+
+.desingbuton {
+    border: none;
+    margin-top: 5px;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #000000; /* Color base del botón */
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave del efecto de sombra */
+}
+.desingbuton:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta el desplazamiento y la opacidad de la sombra */
+}
+
+.Descripcion{
+    font-size:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Precio{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ccc;
+}
+
+.desinginput{
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    border: 0;
+    outline: none;
+
+}

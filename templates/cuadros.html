@@ -1,0 +1,19 @@
+{%extends "vistgen.html"%}
+{% block sillas%}
+<link rel="stylesheet" href="../static/css/items.css">
+<div class="divicion">
+    {% for silla in itemsi %}
+    <div class="item">
+        <div><td><img src="{{ silla[1] }}" width="35%"></td></div><!--Aqui esta la imagen-->
+        <div class="Descripcion"><td>{{ silla[2] }}</td></div><!--Aqui esta la descripcion-->
+        <div class="Precio"><td>$ {{ silla[0] }}</td></div><!--Aqui esta el precio-->
+        <form method="POST" action="{{ url_for('agregar_al_carrito') }}">
+            <input type="hidden" name="producto_precio" value="{{silla[0]}}">
+            <input type="hidden" name="producto_imagen" value="{{silla[1]}}">
+            <input type="hidden" name="producto_descripcion" value="{{silla[2]}}">
+            <button class="desingbuton" type="submit">Agregar</button>
+        </form>
+    </div>
+{% endfor %}
+</div>
+{% endblock%}

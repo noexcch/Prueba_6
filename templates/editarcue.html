@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/rescha.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="padre">
+    <div class="hijo">
+        <img height="100%" width="100%" src="../static/imagenes/login.jpg">
+    </div>
+    <div class="hijo">
+        <div class="fin">
+        <div><h1>EDITA TUS DATOS</h1></div>
+            <div><form class="fo" action="/editar" method="POST" ></div>
+                <div class="box"><input class="desinginput" type="text" name="up_name" placeholder="Nombre" value="{{ user_data[0] }}" required></div>
+                <div class="box"><input class="desinginput" type="text" name="up_apell" placeholder="Apellido" value="{{ user_data[1] }}" required></div>
+                <div class="box"><input class="desinginput" type="email" name="up_correo" placeholder="Correo" value="{{ user_data[2] }}" required></div>
+                <div class="box"><input class="desinginput" type="password" name="up_contra" placeholder="Contraseña" required></div>
+                <div class="but"><button class="desingbuton" type="submit">Actualizar</button></div>
+               
+            </form>  
+            <div><a href="/vistgen"><button class="desingbuton">Regresar</button></a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

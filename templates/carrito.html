@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/itemscar.css">
+    <title>Document</title>
+</head>
+<body>  
+<h1>CARRO DE COMPRAS</h1>
+<div class="divicion">
+    {% for item in items %}
+    <div class="item">
+        <div><img src="{{ item[1] }}" width="45%"></div>
+        <div class="Descripcion">{{ item[2] }}</div>
+        <div class="Precio">$ {{ item[0] }}</div>
+        <form action="{{ url_for('eliminar', id_carrito=item[3]) }}" method="POST">
+            <button class="desingbuton">Eliminar</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+<div class="total">
+    <p>Total: {{ total if total else 0 }}</p>
+</div>
+    <div>
+        <a href="/vistgen"><button class="desingbuton1">Regresar</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1{
+    font-family: sans-serif;
+}
+
+.campogen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.campo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+

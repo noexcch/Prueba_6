@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vistgen.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="Menu">
+                <div><a class="col" href="/vistgen">HOME</a></div>
+                <div><a class="col" href="/ver_carrito">SHOP</a></div>
+                <div><a class="col" href="/logout">ME</a></div>  
+                <div><a class="col" href="/chat">CHAT</a></div>
+        </div>
+      </nav>
+        {% block logout %} {% endblock %}
+        {% block chat %} {% endblock %}
+        <div class="slider">
+          <div class="slides">
+            <img src="../static/imagenes/Silla.JPEG" alt="">
+            <img src="../static/imagenes/Planta.JPEG" alt="">
+            <img src="../static/imagenes/Sillon.JPEG" alt="">
+            <img src="../static/imagenes/Silla.JPEG" alt="">
+          </div>
+        </div>
+        <hr>
+        <h1>nuestas categorias.</h1>
+      <div class="Categoria">
+          <div class="zoom-link"><a href="/vistgen">Sillas</a></div>
+          <div class="zoom-link"><a href="/mesas">Mesas</a></div>
+          <div class="zoom-link"><a href="/sofas">Sofas</a></div>
+          <div class="zoom-link"><a href="/cuadros">Cuadros</a></div>
+          <div class="zoom-link"><a href="/plantas">Plantas</a></div>
+      </div> 
+    </header>
+        
+    <main>
+        <section>
+          <div class="divicion">
+            <link rel="stylesheet" href="../static/css/items.css">
+            {% for silla in itemsil %}
+            <div class="item">
+                <div><td><img src="{{ silla[1] }}" width="45%"></td></div><!--Aqui esta la imagen-->
+                <div class="Descripcion"><td>{{ silla[2] }}</td></div><!--Aqui esta la descripcion-->
+                <div class="Precio"><td>$ {{ silla[0] }}</td></div><!--Aqui esta el precio-->
+                <form method="POST" action="{{ url_for('agregar_al_carrito') }}">
+                    <input type="hidden" name="producto_precio" value="{{silla[0]}}">
+                    <input type="hidden" name="producto_imagen" value="{{silla[1]}}">
+                    <input type="hidden" name="producto_descripcion" value="{{silla[2]}}">
+                    <button class="desingbuton" type="submit">Agregar</button>
+                </form>
+            </div>
+        {% endfor %}
+        </div>
+          {% block sillas%}{%endblock%}
+          {% block mesas%}{%endblock%}
+          {% block sofas%}{%endblock%}
+          {% block cuadros%}{%endblock%}
+          {% block plantas%}{%endblock%}
+        </section>  
+    </main>
+    <hr>
+    <img width="100%" src="../static/imagenes/sobreus.png" alt="">
+    {% include "footer.html" %}
+
+</body>
+</html>

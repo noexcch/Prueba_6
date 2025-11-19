@@ -1,0 +1,14 @@
+{% extends 'vistgen.html'%}
+{% block title%}logout{% endblock%}
+{% block logout%}
+<link rel="stylesheet" href="../static/css/logout.css">
+    <div class="salida">
+    <form action="/logout" method="POST">  
+        <button class="desingbutono">Cerrar sesion</button>
+    </form>
+    <form action="/borrarcu" method="POST">  
+        <button class="desingbutono">Borrar cuenta</button>
+    </form>  
+    <a href="/editar">Editar cuenta</a> 
+    </div>
+{% endblock%}

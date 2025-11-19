@@ -1,0 +1,20 @@
+{% extends "index.html"%}
+{% block title%}Sesion{% endblock%}
+{% block sesion%}
+<link rel="stylesheet" href="../static/css/sesion.css">
+    <div class="menuse">
+        <div><form action="/sesion" method="POST"></div>
+        <div><h1>BIENVENIDO DE VUELTA</h1></div>
+        <div class="box"><input class="desinginput" type="text" placeholder="Correo" name="com_correo" ></div>
+        <div class="box"><input class="desinginput" type="password" placeholder="Contraseña" name="com_contra"></div>
+        <div><button class="desingbuton">Iniciar sesion</button></div>
+        </form>
+        <div><p class="dele">¿No tienes una cuenta?</p></div>
+        <div><a class="dele" href="/registra">Registrate</a></div>
+        {% if msjo %}  <!-- Aquí se verifica si hay un mensaje -->
+        <div class="alert">{{ msjo }}</div>  <!-- Se muestra el mensaje -->
+        {% endif %}
+    </div>
+{% endblock%}
+
+
